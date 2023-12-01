@@ -3,7 +3,6 @@ package dv.trunov.annotation_based;
 import dv.trunov.MusicGenre;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.util.Arrays;
 import java.util.Collections;
 
 public class AnnotationApplication {
