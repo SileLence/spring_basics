@@ -10,7 +10,7 @@
         http://www.springframework.org/schema/util
         http://www.springframework.org/schema/util/spring-util-2.5.xsd">
 
-    <context:component-scan base-package="dv.trunov"/>
+    <context:component-scan base-package="dv.trunov.xml_based"/>
     <context:property-placeholder location="classpath:application.properties"/>
 
     <bean id="xmlAmbientMusic"

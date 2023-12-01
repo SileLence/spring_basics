@@ -4,22 +4,24 @@ import dv.trunov.Music;
 import dv.trunov.MusicGenre;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class MusicPlayer {
 
     private String name;
     private int volume;
     private final Music rockMusic;
     private final Music instrumentalMusic;
-//
-//    @Autowired
-//    @Qualifier("ambientMusic")
+
+    @Autowired
+    @Qualifier("ambientMusic")
     private Music ambientMusic;
     private List<Music> musicList;
 
-//    @Autowired
+    @Autowired
     public MusicPlayer(@Qualifier("rockMusic") Music rockMusic,
                        @Qualifier("instrumentalMusic") Music instrumentalMusic) {
         this.rockMusic = rockMusic;
@@ -27,12 +29,12 @@ public class MusicPlayer {
     }
 
     public void init() {
-        System.out.println("Music Player Initialized.");
+        System.out.println("Annotation Music Player Initialized.");
     }
 
     // Вызывается только для синглтон бинов
     public void destroy() {
-        System.out.println("Music Player Destroyed.");
+        System.out.println("Annotation Music Player Destroyed.");
     }
 
     public String playMusic(MusicGenre genre) {

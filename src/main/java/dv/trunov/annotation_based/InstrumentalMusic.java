@@ -1,10 +1,12 @@
 package dv.trunov.annotation_based;
 
 import dv.trunov.Music;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Random;
 
+@Component
 public class InstrumentalMusic extends Music {
 
     private InstrumentalMusic() {

@@ -14,12 +14,12 @@ public class JavaMusicPlayer {
     private final Music rockMusic;
     private final Music instrumentalMusic;
 
-//    @Autowired
-//    @Qualifier("ambientMusic")
+    @Autowired
+    @Qualifier("ambientMusic")
     private Music ambientMusic;
     private List<Music> musicList;
 
-//    @Autowired
+    @Autowired
     public JavaMusicPlayer(@Qualifier("rockMusic") Music rockMusic,
                            @Qualifier("instrumentalMusic") Music instrumentalMusic) {
         this.rockMusic = rockMusic;
@@ -27,12 +27,12 @@ public class JavaMusicPlayer {
     }
 
     public void init() {
-        System.out.println("Music Player Initialized.");
+        System.out.println("Java Music Player Initialized.");
     }
 
     // Вызывается только для синглтон бинов
     public void destroy() {
-        System.out.println("Music Player Destroyed.");
+        System.out.println("Java Music Player Destroyed.");
     }
 
     public String playMusic(MusicGenre genre) {
