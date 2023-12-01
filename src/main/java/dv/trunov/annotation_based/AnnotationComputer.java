@@ -6,19 +6,19 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Computer {
+public class AnnotationComputer {
 
     @Value("${computer.id}")
     private int id;
 
     @Autowired
-    private MusicPlayer player;
+    private AnnotationMusicPlayer player;
 
-    public MusicPlayer getMusicPlayer() {
+    public AnnotationMusicPlayer getMusicPlayer() {
         return player;
     }
 
     public void runMusicPlayer(MusicGenre genre) {
-        System.out.printf("Computer -> Playing: %s\n", player.playMusic(genre));
+        System.out.printf("AnnotationComputer -> Playing: %s\n", player.playMusic(genre));
     }
 }

@@ -17,6 +17,7 @@ public class XmlApplication {
         computer.runMusicPlayer(MusicGenre.INSTRUMENTAL);
         computer.runMusicPlayer(MusicGenre.ROCK);
         computer.runMusicPlayer(MusicGenre.AMBIENT);
+        System.out.println();
 
         context.close();
     }

@@ -4,7 +4,7 @@ import dv.trunov.Music;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AmbientMusic extends Music {
+public class AnnotationAmbientMusic extends Music {
 
     @Override
     public String getSongName() {

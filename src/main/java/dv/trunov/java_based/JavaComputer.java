@@ -19,6 +19,6 @@ public class JavaComputer {
     }
 
     public void runMusicPlayer(MusicGenre genre) {
-        System.out.printf("Computer -> Playing: %s\n", player.playMusic(genre));
+        System.out.printf("JavaComputer -> Playing: %s\n", player.playMusic(genre));
     }
 }

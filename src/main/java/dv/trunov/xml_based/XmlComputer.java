@@ -16,7 +16,7 @@ public class XmlComputer {
     }
 
     public void runMusicPlayer(MusicGenre genre) {
-        System.out.printf("Computer %d -> Playing: %s\n", id, musicPlayer.playMusic(genre));
+        System.out.printf("XmlComputer %d -> Playing: %s\n", id, musicPlayer.playMusic(genre));
     }
 
     public void setId(int id) {

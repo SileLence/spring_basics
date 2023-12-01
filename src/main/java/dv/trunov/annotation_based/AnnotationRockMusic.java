@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Random;
 
 @Component
-public class RockMusic extends Music {
+public class AnnotationRockMusic extends Music {
 
-    public RockMusic() {
+    public AnnotationRockMusic() {
         this.songs = List.of("Du Hast", "Moth into Flame", "Hit the Floor");
     }
     @Override

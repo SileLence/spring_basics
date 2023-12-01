@@ -7,13 +7,13 @@ import java.util.List;
 import java.util.Random;
 
 @Component
-public class InstrumentalMusic extends Music {
+public class AnnotationInstrumentalMusic extends Music {
 
-    private InstrumentalMusic() {
+    private AnnotationInstrumentalMusic() {
     }
 
-    private static InstrumentalMusic getInstrumentalMusic() {
-        InstrumentalMusic instrumentalMusic = new InstrumentalMusic();
+    private static AnnotationInstrumentalMusic getInstrumentalMusic() {
+        AnnotationInstrumentalMusic instrumentalMusic = new AnnotationInstrumentalMusic();
         instrumentalMusic.songs = List.of("It's Never Too Late", "Song for George", "Windy and Warm");
         return instrumentalMusic;
     }

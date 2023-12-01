@@ -8,9 +8,9 @@ public class AnnotationApplication {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("annotation-based-context.xml");
 
-        Computer computer = context.getBean(Computer.class);
+        AnnotationComputer computer = context.getBean(AnnotationComputer.class);
 
-        MusicPlayer musicPlayer = computer.getMusicPlayer();
+        AnnotationMusicPlayer musicPlayer = computer.getMusicPlayer();
         musicPlayer.getName();
         musicPlayer.getVolume();
 

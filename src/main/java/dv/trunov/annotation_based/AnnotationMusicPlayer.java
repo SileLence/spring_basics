@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class MusicPlayer {
+public class AnnotationMusicPlayer {
 
     private String name;
     private int volume;
@@ -22,8 +22,8 @@ public class MusicPlayer {
     private List<Music> musicList;
 
     @Autowired
-    public MusicPlayer(@Qualifier("rockMusic") Music rockMusic,
-                       @Qualifier("instrumentalMusic") Music instrumentalMusic) {
+    public AnnotationMusicPlayer(@Qualifier("rockMusic") Music rockMusic,
+                                 @Qualifier("instrumentalMusic") Music instrumentalMusic) {
         this.rockMusic = rockMusic;
         this.instrumentalMusic = instrumentalMusic;
     }
