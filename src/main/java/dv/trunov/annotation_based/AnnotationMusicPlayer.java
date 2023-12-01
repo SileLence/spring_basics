@@ -4,6 +4,7 @@ import dv.trunov.Music;
 import dv.trunov.MusicGenre;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -11,19 +12,23 @@ import java.util.List;
 @Component
 public class AnnotationMusicPlayer {
 
+    @Value("${musicPlayer.name}")
     private String name;
+
+    @Value("${musicPlayer.volume}")
     private int volume;
     private final Music rockMusic;
     private final Music instrumentalMusic;
 
     @Autowired
-    @Qualifier("ambientMusic")
+    @Qualifier("annotationAmbientMusic")
     private Music ambientMusic;
+
     private List<Music> musicList;
 
     @Autowired
-    public AnnotationMusicPlayer(@Qualifier("rockMusic") Music rockMusic,
-                                 @Qualifier("instrumentalMusic") Music instrumentalMusic) {
+    public AnnotationMusicPlayer(@Qualifier("annotationRockMusic") Music rockMusic,
+                                 @Qualifier("annotationInstrumentalMusic") Music instrumentalMusic) {
         this.rockMusic = rockMusic;
         this.instrumentalMusic = instrumentalMusic;
     }

@@ -8,6 +8,8 @@ public class AppStart {
 
     public static void main(String[] args) {
         startXmlApplication();
+        startAnnotationApplication();
+        startJavaApplication();
     }
 
     public static void startXmlApplication() {

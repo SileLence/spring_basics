@@ -9,9 +9,6 @@ import java.util.Random;
 @Component
 public class AnnotationInstrumentalMusic extends Music {
 
-    private AnnotationInstrumentalMusic() {
-    }
-
     private static AnnotationInstrumentalMusic getInstrumentalMusic() {
         AnnotationInstrumentalMusic instrumentalMusic = new AnnotationInstrumentalMusic();
         instrumentalMusic.songs = List.of("It's Never Too Late", "Song for George", "Windy and Warm");

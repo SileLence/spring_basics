@@ -12,13 +12,13 @@ public class AnnotationComputer {
     private int id;
 
     @Autowired
-    private AnnotationMusicPlayer player;
+    private AnnotationMusicPlayer musicPlayer;
 
     public AnnotationMusicPlayer getMusicPlayer() {
-        return player;
+        return musicPlayer;
     }
 
     public void runMusicPlayer(MusicGenre genre) {
-        System.out.printf("AnnotationComputer -> Playing: %s\n", player.playMusic(genre));
+        System.out.printf("AnnotationComputer -> Playing: %s\n", musicPlayer.playMusic(genre));
     }
 }
