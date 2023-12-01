@@ -1,8 +1,8 @@
-package dv.trunov.pattern;
+package dv.trunov;
 
 public class Singleton {
 
-    private static Singleton instance;
+    private static Singleton INSTANCE;
     private final String name;
 
     private Singleton(String name) {
@@ -14,9 +14,9 @@ public class Singleton {
     }
 
     public static Singleton getInstance(String value) {
-        if (instance == null) {
-            instance = new Singleton(value);
+        if (INSTANCE == null) {
+            INSTANCE = new Singleton(value);
         }
-        return instance;
+        return INSTANCE;
     }
 }
