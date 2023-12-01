@@ -5,13 +5,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Computer {
 
-    @Value("${computer.id}")
+//    @Value("${computer.id}")
     private int id;
 
-    @Autowired
+//    @Autowired
     private MusicPlayer player;
 
     public MusicPlayer getMusicPlayer() {

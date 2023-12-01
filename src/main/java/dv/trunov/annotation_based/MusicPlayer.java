@@ -13,13 +13,13 @@ public class MusicPlayer {
     private int volume;
     private final Music rockMusic;
     private final Music instrumentalMusic;
-
-    @Autowired
-    @Qualifier("ambientMusic")
+//
+//    @Autowired
+//    @Qualifier("ambientMusic")
     private Music ambientMusic;
     private List<Music> musicList;
 
-    @Autowired
+//    @Autowired
     public MusicPlayer(@Qualifier("rockMusic") Music rockMusic,
                        @Qualifier("instrumentalMusic") Music instrumentalMusic) {
         this.rockMusic = rockMusic;

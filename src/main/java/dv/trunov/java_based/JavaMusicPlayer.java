@@ -7,21 +7,21 @@ import org.springframework.beans.factory.annotation.Qualifier;
 
 import java.util.List;
 
-public class MusicPlayer {
+public class JavaMusicPlayer {
 
     private String name;
     private int volume;
     private final Music rockMusic;
     private final Music instrumentalMusic;
 
-    @Autowired
-    @Qualifier("ambientMusic")
+//    @Autowired
+//    @Qualifier("ambientMusic")
     private Music ambientMusic;
     private List<Music> musicList;
 
-    @Autowired
-    public MusicPlayer(@Qualifier("rockMusic") Music rockMusic,
-                       @Qualifier("instrumentalMusic") Music instrumentalMusic) {
+//    @Autowired
+    public JavaMusicPlayer(@Qualifier("rockMusic") Music rockMusic,
+                           @Qualifier("instrumentalMusic") Music instrumentalMusic) {
         this.rockMusic = rockMusic;
         this.instrumentalMusic = instrumentalMusic;
     }

@@ -25,7 +25,7 @@
 
     <bean id="xmlComputer"
           class="dv.trunov.xml_based.XmlComputer">
-        <constructor-arg ref="musicPlayer"/>
+        <constructor-arg name="musicPlayer" ref="xmlMusicPlayer"/>
         <property name="id" value="${computer.id}"/>
     </bean>
 
@@ -34,15 +34,18 @@
           scope="prototype"
           init-method="init"
           destroy-method="destroy">
+        <constructor-arg name="rockMusic" ref="xmlRockMusic"/>
+        <constructor-arg name="instrumentalMusic" ref="xmlInstrumentalMusic"/>
+        <property name="ambientMusic" ref="xmlAmbientMusic"/>
         <property name="musicList" ref="musicList"/>
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
     </bean>
 
     <util:list id="musicList" value-type="dv.trunov.Music">
-        <ref bean="instrumentalMusic"/>
-        <ref bean="rockMusic"/>
-        <ref bean="ambientMusic"/>
+        <ref bean="xmlInstrumentalMusic"/>
+        <ref bean="xmlRockMusic"/>
+        <ref bean="xmlAmbientMusic"/>
     </util:list>
 
 </beans>

@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.Random;
 
-@Component
+//@Component
 public class RockMusic extends Music {
 
     public RockMusic() {

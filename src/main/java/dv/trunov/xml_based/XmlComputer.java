@@ -19,7 +19,7 @@ public class XmlComputer {
         System.out.printf("Computer %d -> Playing: %s\n", id, musicPlayer.playMusic(genre));
     }
 
-    private void setId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 }

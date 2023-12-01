@@ -2,8 +2,6 @@ package dv.trunov.xml_based;
 
 import dv.trunov.Music;
 import dv.trunov.MusicGenre;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 
 import java.util.List;
 
@@ -13,26 +11,22 @@ public class XmlMusicPlayer {
     private int volume;
     private final Music rockMusic;
     private final Music instrumentalMusic;
-
-    @Autowired
-    @Qualifier("ambientMusic")
     private Music ambientMusic;
     private List<Music> musicList;
 
-    @Autowired
-    public XmlMusicPlayer(@Qualifier("rockMusic") Music rockMusic,
-                          @Qualifier("instrumentalMusic") Music instrumentalMusic) {
+    public XmlMusicPlayer(Music rockMusic,
+                          Music instrumentalMusic) {
         this.rockMusic = rockMusic;
         this.instrumentalMusic = instrumentalMusic;
     }
 
     public void init() {
-        System.out.println("Music Player Initialized.");
+        System.out.println("Xml Music Player Initialized.");
     }
 
     // Вызывается только для синглтон бинов
     public void destroy() {
-        System.out.println("Music Player Destroyed.");
+        System.out.println("Xml Music Player Destroyed.");
     }
 
     public String playMusic(MusicGenre genre) {
@@ -48,6 +42,10 @@ public class XmlMusicPlayer {
             }
         }
         return null;
+    }
+
+    public void setAmbientMusic(Music ambientMusic) {
+        this.ambientMusic = ambientMusic;
     }
 
     public void getName() {

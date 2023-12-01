@@ -6,10 +6,10 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 import java.util.Random;
 
-@Component
-public class RockMusic extends Music {
+//@Component
+public class JavaRockMusic extends Music {
 
-    public RockMusic() {
+    public JavaRockMusic() {
         this.songs = List.of("Du Hast", "Moth into Flame", "Hit the Floor");
     }
     @Override

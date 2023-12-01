@@ -5,13 +5,13 @@ import dv.trunov.Music;
 import java.util.List;
 import java.util.Random;
 
-public class InstrumentalMusic extends Music {
+public class JavaInstrumentalMusic extends Music {
 
-    private InstrumentalMusic() {
+    private JavaInstrumentalMusic() {
     }
 
-    private static InstrumentalMusic getInstrumentalMusic() {
-        InstrumentalMusic instrumentalMusic = new InstrumentalMusic();
+    private static JavaInstrumentalMusic getInstrumentalMusic() {
+        JavaInstrumentalMusic instrumentalMusic = new JavaInstrumentalMusic();
         instrumentalMusic.songs = List.of("It's Never Too Late", "Song for George", "Windy and Warm");
         return instrumentalMusic;
     }
