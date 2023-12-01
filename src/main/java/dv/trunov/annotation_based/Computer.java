@@ -1,5 +1,6 @@
-package dv.trunov;
+package dv.trunov.annotation_based;
 
+import dv.trunov.MusicGenre;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;

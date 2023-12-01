@@ -1,5 +1,6 @@
-package dv.trunov;
+package dv.trunov.java_based;
 
+import dv.trunov.Music;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

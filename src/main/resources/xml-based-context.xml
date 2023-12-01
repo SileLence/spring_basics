@@ -11,15 +11,26 @@
         http://www.springframework.org/schema/util/spring-util-2.5.xsd">
 
     <context:component-scan base-package="dv.trunov"/>
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+    <context:property-placeholder location="classpath:application.properties"/>
 
-    <bean id="instrumentalMusic"
-          class="dv.trunov.InstrumentalMusic"
-          factory-method="getInstrumentalMusic">
+    <bean id="xmlAmbientMusic"
+          class="dv.trunov.xml_based.XmlAmbientMusic"/>
+
+    <bean id="xmlInstrumentalMusic"
+          class="dv.trunov.xml_based.XmlInstrumentalMusic"
+          factory-method="getInstrumentalMusic"/>
+
+    <bean id="xmlRockMusic"
+          class="dv.trunov.xml_based.XmlRockMusic"/>
+
+    <bean id="xmlComputer"
+          class="dv.trunov.xml_based.XmlComputer">
+        <constructor-arg ref="musicPlayer"/>
+        <property name="id" value="${computer.id}"/>
     </bean>
 
-    <bean id="musicPlayer"
-          class="dv.trunov.MusicPlayer"
+    <bean id="xmlMusicPlayer"
+          class="dv.trunov.xml_based.XmlMusicPlayer"
           scope="prototype"
           init-method="init"
           destroy-method="destroy">

@@ -1,5 +1,6 @@
-package dv.trunov;
+package dv.trunov.annotation_based;
 
+import dv.trunov.Music;
 import org.springframework.stereotype.Component;
 
 @Component

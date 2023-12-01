@@ -1,15 +1,16 @@
-package dv.trunov;
+package dv.trunov.xml_based;
 
+import dv.trunov.MusicGenre;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Application {
+public class XmlApplication {
 
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("xml-based-context.xml");
 
-        Computer computer = context.getBean(Computer.class);
+        XmlComputer computer = context.getBean(XmlComputer.class);
 
-        MusicPlayer musicPlayer = computer.getMusicPlayer();
+        XmlMusicPlayer musicPlayer = computer.getMusicPlayer();
         musicPlayer.getName();
         musicPlayer.getVolume();
 

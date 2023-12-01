@@ -1,8 +1,9 @@
-package dv.trunov;
+package dv.trunov.java_based;
 
+import dv.trunov.Music;
+import dv.trunov.MusicGenre;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
 
 import java.util.List;
 
@@ -34,6 +35,21 @@ public class MusicPlayer {
         System.out.println("Music Player Destroyed.");
     }
 
+    public String playMusic(MusicGenre genre) {
+        switch (genre) {
+            case ROCK -> {
+                return rockMusic.getSongName();
+            }
+            case INSTRUMENTAL -> {
+                return instrumentalMusic.getSongName();
+            }
+            case AMBIENT -> {
+                return ambientMusic.getSongName();
+            }
+        }
+        return null;
+    }
+
     public void getName() {
         System.out.println(name);
     }
@@ -56,20 +72,5 @@ public class MusicPlayer {
 
     public void setMusicList(List<Music> musicList) {
         this.musicList = musicList;
-    }
-
-    public String playMusic(MusicGenre genre) {
-        switch (genre) {
-            case ROCK -> {
-                return rockMusic.getSongName();
-            }
-            case INSTRUMENTAL -> {
-                return instrumentalMusic.getSongName();
-            }
-            case AMBIENT -> {
-                return ambientMusic.getSongName();
-            }
-        }
-        return null;
     }
 }
