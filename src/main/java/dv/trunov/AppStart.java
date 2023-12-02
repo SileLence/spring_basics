@@ -8,18 +8,18 @@ public class AppStart {
 
     public static void main(String[] args) {
         startXmlApplication();
-        System.out.println();
         startAnnotationApplication();
-        System.out.println();
         startJavaApplication();
     }
 
     public static void startXmlApplication() {
         XmlApplication.main(new String[0]);
+        System.out.println();
     }
 
     public static void startAnnotationApplication() {
         AnnotationApplication.main(new String[0]);
+        System.out.println();
     }
 
     public static void startJavaApplication() {
