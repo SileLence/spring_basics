@@ -10,6 +10,7 @@ public class AppStart {
         startXmlApplication();
         startAnnotationApplication();
         startJavaApplication();
+
     }
 
     public static void startXmlApplication() {
