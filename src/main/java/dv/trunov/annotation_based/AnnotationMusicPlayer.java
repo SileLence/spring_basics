@@ -34,12 +34,12 @@ public class AnnotationMusicPlayer {
     }
 
     public void init() {
-        System.out.println("Annotation Music Player Initialized.");
+        System.out.println("AnnotationMusicPlayer Initialized.");
     }
 
     // Вызывается только для синглтон бинов
     public void destroy() {
-        System.out.println("Annotation Music Player Destroyed.");
+        System.out.println("AnnotationMusicPlayer Destroyed.");
     }
 
     public String playMusic(MusicGenre genre) {

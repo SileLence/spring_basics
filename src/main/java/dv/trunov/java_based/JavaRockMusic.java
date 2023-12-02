@@ -1,12 +1,10 @@
 package dv.trunov.java_based;
 
 import dv.trunov.Music;
-import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Random;
 
-@Component
 public class JavaRockMusic extends Music {
 
     public JavaRockMusic() {

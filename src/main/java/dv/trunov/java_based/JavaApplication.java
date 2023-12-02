@@ -13,6 +13,7 @@ public class JavaApplication {
         JavaMusicPlayer musicPlayer = computer.getMusicPlayer();
         musicPlayer.getName();
         musicPlayer.getVolume();
+        System.out.println(musicPlayer.getMusicList());
 
         computer.runMusicPlayer(MusicGenre.INSTRUMENTAL);
         computer.runMusicPlayer(MusicGenre.ROCK);

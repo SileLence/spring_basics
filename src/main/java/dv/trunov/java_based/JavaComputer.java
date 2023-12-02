@@ -1,24 +1,24 @@
 package dv.trunov.java_based;
 
 import dv.trunov.MusicGenre;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
 
-@Component
 public class JavaComputer {
 
     @Value("${computer.id}")
     private int id;
 
-    @Autowired
-    private JavaMusicPlayer player;
+    private final JavaMusicPlayer musicPlayer;
+
+    public JavaComputer(JavaMusicPlayer musicPlayer) {
+        this.musicPlayer = musicPlayer;
+    }
 
     public JavaMusicPlayer getMusicPlayer() {
-        return player;
+        return musicPlayer;
     }
 
     public void runMusicPlayer(MusicGenre genre) {
-        System.out.printf("JavaComputer -> Playing: %s\n", player.playMusic(genre));
+        System.out.printf("JavaComputer %d -> Playing: %s\n", id, musicPlayer.playMusic(genre));
     }
 }

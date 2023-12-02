@@ -13,12 +13,18 @@
     <context:component-scan base-package="dv.trunov.annotation_based"/>
     <context:property-placeholder location="classpath:application.properties"/>
 
+    <bean id="ambientMusic"
+          class="dv.trunov.annotation_based.AnnotationAmbientMusic"
+          init-method="init"
+          destroy-method="destroy"/>
+
     <bean id="annotationInstrumentalMusic"
           class="dv.trunov.annotation_based.AnnotationInstrumentalMusic"
           factory-method="getInstrumentalMusic"/>
 
     <bean id="annotationMusicPlayer"
           class="dv.trunov.annotation_based.AnnotationMusicPlayer"
+          scope="prototype"
           init-method="init"
           destroy-method="destroy">
         <property name="musicList" ref="musicList"/>

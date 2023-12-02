@@ -21,12 +21,12 @@ public class XmlMusicPlayer {
     }
 
     public void init() {
-        System.out.println("Xml Music Player Initialized.");
+        System.out.println("XmlMusicPlayer Initialized.");
     }
 
     // Вызывается только для синглтон бинов
     public void destroy() {
-        System.out.println("Xml Music Player Destroyed.");
+        System.out.println("XmlMusicPlayer Destroyed.");
     }
 
     public String playMusic(MusicGenre genre) {

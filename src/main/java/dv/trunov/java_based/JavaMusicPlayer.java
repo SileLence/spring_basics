@@ -2,37 +2,35 @@ package dv.trunov.java_based;
 
 import dv.trunov.Music;
 import dv.trunov.MusicGenre;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.util.List;
 
 public class JavaMusicPlayer {
 
+    @Value("${musicPlayer.name}")
     private String name;
+
+    @Value("${musicPlayer.volume}")
     private int volume;
     private final Music rockMusic;
     private final Music instrumentalMusic;
-
-    @Autowired
-    @Qualifier("ambientMusic")
     private Music ambientMusic;
     private List<Music> musicList;
 
-    @Autowired
-    public JavaMusicPlayer(@Qualifier("rockMusic") Music rockMusic,
-                           @Qualifier("instrumentalMusic") Music instrumentalMusic) {
+
+    public JavaMusicPlayer(Music rockMusic, Music instrumentalMusic) {
         this.rockMusic = rockMusic;
         this.instrumentalMusic = instrumentalMusic;
     }
 
     public void init() {
-        System.out.println("Java Music Player Initialized.");
+        System.out.println("JavaMusicPlayer Initialized.");
     }
 
     // Вызывается только для синглтон бинов
     public void destroy() {
-        System.out.println("Java Music Player Destroyed.");
+        System.out.println("JavaMusicPlayer Destroyed.");
     }
 
     public String playMusic(MusicGenre genre) {
@@ -48,6 +46,14 @@ public class JavaMusicPlayer {
             }
         }
         return null;
+    }
+
+    public Music getAmbientMusic() {
+        return ambientMusic;
+    }
+
+    public void setAmbientMusic(Music ambientMusic) {
+        this.ambientMusic = ambientMusic;
     }
 
     public void getName() {

@@ -8,7 +8,9 @@ public class AppStart {
 
     public static void main(String[] args) {
         startXmlApplication();
+        System.out.println();
         startAnnotationApplication();
+        System.out.println();
         startJavaApplication();
     }
 
