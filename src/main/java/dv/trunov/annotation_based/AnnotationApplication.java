@@ -3,8 +3,6 @@ package dv.trunov.annotation_based;
 import dv.trunov.MusicGenre;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.util.Collections;
-
 public class AnnotationApplication {
 
     public static void main(String[] args) {
@@ -15,7 +13,8 @@ public class AnnotationApplication {
         AnnotationMusicPlayer musicPlayer = computer.getMusicPlayer();
         musicPlayer.getName();
         musicPlayer.getVolume();
-        System.out.println(Collections.singletonList(musicPlayer.getMusicList()));
+        musicPlayer.getMusicList();
+        musicPlayer.playRandomSong();
 
         computer.runMusicPlayer(MusicGenre.INSTRUMENTAL);
         computer.runMusicPlayer(MusicGenre.ROCK);

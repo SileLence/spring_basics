@@ -5,6 +5,7 @@ import dv.trunov.MusicGenre;
 import org.springframework.beans.factory.annotation.Value;
 
 import java.util.List;
+import java.util.Random;
 
 public class JavaMusicPlayer {
 
@@ -48,6 +49,13 @@ public class JavaMusicPlayer {
         return null;
     }
 
+    public void playRandomSong() {
+        Random random = new Random();
+        System.out.printf("Random song: %s\n",
+            musicList.get(random.nextInt(0, 3)).getSongName()
+        );
+    }
+
     public Music getAmbientMusic() {
         return ambientMusic;
     }
@@ -72,8 +80,8 @@ public class JavaMusicPlayer {
         this.volume = volume;
     }
 
-    public List<Music> getMusicList() {
-        return musicList;
+    public void getMusicList() {
+        System.out.println(musicList.toString());
     }
 
     public void setMusicList(List<Music> musicList) {

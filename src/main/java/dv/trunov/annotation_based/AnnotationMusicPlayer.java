@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Random;
 
 @Component
 public class AnnotationMusicPlayer {
@@ -57,6 +58,13 @@ public class AnnotationMusicPlayer {
         return null;
     }
 
+    public void playRandomSong() {
+        Random random = new Random();
+        System.out.printf("Random song: %s\n",
+            musicList.get(random.nextInt(0, 3)).getSongName()
+        );
+    }
+
     public void getName() {
         System.out.println(name);
     }
@@ -73,8 +81,8 @@ public class AnnotationMusicPlayer {
         this.volume = volume;
     }
 
-    public List<Music> getMusicList() {
-        return musicList;
+    public void getMusicList() {
+        System.out.println(musicList.toString());
     }
 
     public void setMusicList(List<Music> musicList) {

@@ -4,6 +4,7 @@ import dv.trunov.Music;
 import dv.trunov.MusicGenre;
 
 import java.util.List;
+import java.util.Random;
 
 public class XmlMusicPlayer {
 
@@ -44,6 +45,13 @@ public class XmlMusicPlayer {
         return null;
     }
 
+    public void playRandomSong() {
+        Random random = new Random();
+        System.out.printf("Random song: %s\n",
+            musicList.get(random.nextInt(0, 3)).getSongName()
+        );
+    }
+
     public void setAmbientMusic(Music ambientMusic) {
         this.ambientMusic = ambientMusic;
     }
@@ -64,8 +72,8 @@ public class XmlMusicPlayer {
         this.volume = volume;
     }
 
-    public List<Music> getMusicList() {
-        return musicList;
+    public void getMusicList() {
+        System.out.println(musicList.toString());
     }
 
     public void setMusicList(List<Music> musicList) {

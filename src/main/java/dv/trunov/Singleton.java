@@ -13,9 +13,9 @@ public class Singleton {
         System.out.println(name);
     }
 
-    public static Singleton getInstance(String value) {
+    public static Singleton getInstance(String name) {
         if (INSTANCE == null) {
-            INSTANCE = new Singleton(value);
+            INSTANCE = new Singleton(name);
         }
         return INSTANCE;
     }
